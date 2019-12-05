@@ -31,11 +31,11 @@ class Pomodoro extends React.Component {
                 seconds: this.state.seconds - 1 
             }))
         },1000)       
-        if(this.state.reset){
-            reset()
-        }
         let reset = () =>{
             clearInterval(pomo)
+        }
+        if(this.state.reset){
+            reset()
         }
     }
     
@@ -51,8 +51,8 @@ class Pomodoro extends React.Component {
         this.setState({
         minutes: 0,
         seconds: 0,
-        click: false
-
+        click: false,
+        reset: true
       })
     }
     handleReset(){
@@ -67,7 +67,7 @@ class Pomodoro extends React.Component {
      
     render() {
         let pomo = (
-      <div>
+      <div className = "pomo-timer">
       <h2>{this.state.minutes}:{this.state.seconds}</h2>
       <button onClick = {this.handleReset}>Reset</button>
       <button onClick = {() => this.handleStop()}>Stop</button>
@@ -75,10 +75,10 @@ class Pomodoro extends React.Component {
       
       return (
         <div>
-         <h1>Pomodoro</h1>
+         <h1 className = "pomo-title">Pomodoro</h1>
   
          {this.state.click ? pomo : <button className = 'tomatoBtn' onClick = {this.handleClick}>
-         tomato</button>  }
+        </button>  }
         </div>
       )
     }

@@ -2,10 +2,27 @@ body {
     padding: 20px;
     font-family: Helvetica;
   }
-  
-  
+  .pomo-title{
+    text-align: center;
+  }
+  .pomo-body{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pomo-timer{
+    
+    text-align: center;
+  }
   
   
 .tomatoBtn {
-    background-color: red;
+    border: none;
+    background:url("../images/kisspng-tomato-juice-cartoon-clip-art-creative-tomatoes-5a8a10d4b229c3.6063393915189977167298.png") no-repeat;
+    width:200px;
+    height: 220px;
+    background-size: 100%;
+    background-size: 200px auto;
+    border-radius: 50%;
+   display: block;
+   margin: auto; 
   }
